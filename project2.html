@@ -1,0 +1,2551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amsterdam Luxury Restaurant | Fine Dining in Agadir, Morocco</title>
+    <meta name="description" content="Experience the finest Dutch-inspired international cuisine in Agadir, Morocco. Amsterdam Luxury Restaurant offers a symphony of luxury and flavor in an elegant setting.">
+    <meta name="keywords" content="luxury restaurant in Agadir, Amsterdam restaurant Morocco, fine dining Agadir, Dutch restaurant Morocco">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #e5c76b;
+            --gold-dark: #a38728;
+            --black: #121212;
+            --black-light: #1e1e1e;
+            --brown-dark: #3a2618;
+            --brown-medium: #5e4534;
+            --brown-light: #8c7a6b;
+            --cream: #f5f5f0;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .navbar-brand {
+                font-size: 1rem;
+                max-width: 70%;
+            }
+            
+            .menu-item-title, .menu-item-price {
+                font-size: 1.1rem;
+            }
+            
+            .menu-item-description {
+                font-size: 0.85rem;
+            }
+            
+            .footer-widget h3 {
+                font-size: 1.2rem;
+            }
+            
+            .footer-bottom p {
+                font-size: 0.8rem;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--black);
+            color: var(--cream);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        p {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+        }
+        
+        .gold-text {
+            color: var(--gold);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            background-color: rgba(18, 18, 18, 0.9);
+            padding: 15px 0;
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        @media (max-width: 991px) {
+            .navbar {
+                padding: 10px 0;
+            }
+            
+            .navbar-toggler {
+                padding: 5px 10px;
+                margin-right: 5px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .navbar-brand {
+                font-size: 1.2rem;
+                max-width: 70%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            background-color: rgba(18, 18, 18, 0.95);
+        }
+        
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--gold) !important;
+        }
+        
+        .navbar-brand span {
+            font-size: 0.9rem;
+            display: block;
+            letter-spacing: 3px;
+            color: var(--cream);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .nav-link {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--cream) !important;
+            font-size: 1.1rem;
+            margin: 0 10px;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            color: var(--gold) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            outline: none;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(212, 175, 55, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        
+        .language-selector {
+            margin-left: 15px;
+        }
+        
+        .language-selector .dropdown-toggle {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 5px 10px;
+            font-size: 0.9rem;
+        }
+        
+        .language-selector .dropdown-toggle:hover,
+        .language-selector .dropdown-toggle:focus {
+            background-color: var(--gold);
+            color: var(--black);
+        }
+        
+        .language-selector .dropdown-menu {
+            background-color: var(--black-light);
+            border: 1px solid var(--gold);
+            min-width: 100px;
+        }
+        
+        .language-selector .dropdown-item {
+            color: var(--cream);
+            font-size: 0.9rem;
+            padding: 8px 15px;
+        }
+        
+        .language-selector .dropdown-item:hover {
+            background-color: var(--gold);
+            color: var(--black);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 0 15px;
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero h1 span {
+            color: var(--gold);
+            display: block;
+            font-style: italic;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--cream);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        @media (max-width: 991px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero {
+                height: 80vh;
+                background-attachment: scroll;
+            }
+            
+            .hero-content {
+                padding: 0 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .hero {
+                height: 70vh;
+            }
+            
+            .hero-content {
+                padding: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .btn-gold, .btn-outline-gold {
+                padding: 10px 25px;
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .btn-gold, .btn-outline-gold {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+                width: 80%;
+                margin: 5px auto;
+                display: block;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .btn-gold, .btn-outline-gold {
+                width: 100%;
+                padding: 7px 15px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--black);
+            border: 2px solid var(--gold);
+            padding: 12px 30px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--black);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn-gold:hover {
+            color: var(--gold);
+        }
+        
+        .btn-gold:hover::before {
+            left: 0;
+        }
+        
+        .btn-outline-gold {
+            background-color: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            padding: 12px 30px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .btn-outline-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--gold);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn-outline-gold:hover {
+            color: var(--black);
+        }
+        
+        .btn-outline-gold:hover::before {
+            left: 0;
+        }
+        
+        /* Floating elements */
+        .floating-music {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+        
+        .floating-music:hover {
+            transform: scale(1.1);
+        }
+        
+        .floating-music i {
+            color: var(--black);
+            font-size: 1.2rem;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+        
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        
+        .floating-whatsapp i {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background-color: var(--black-light);
+            position: relative;
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+        
+        .about-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .about-img {
+            position: relative;
+            overflow: hidden;
+            border: 5px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h2 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--cream);
+        }
+        
+        .chef-signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-top: 2rem;
+        }
+        
+        /* Menu Section */
+        .menu-section {
+            padding: 100px 0;
+            background-color: var(--black);
+            position: relative;
+        }
+        
+        .menu-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+        }
+        
+        .menu-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .menu-tab {
+            background: transparent;
+            border: none;
+            color: var(--cream);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .menu-tab::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+        
+        .menu-tab:hover,
+        .menu-tab.active {
+            color: var(--gold);
+        }
+        
+        .menu-tab:hover::after,
+        .menu-tab.active::after {
+            width: 80%;
+        }
+        
+        .menu-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .menu-category {
+            display: none;
+        }
+        
+        .menu-category.active {
+            display: block;
+        }
+        
+        .menu-item {
+            background-color: rgba(30, 30, 30, 0.8);
+            border-left: 3px solid var(--gold);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        @media (max-width: 767px) {
+            .menu-item {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .menu-item:hover::before {
+            opacity: 1;
+        }
+        
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+            padding-bottom: 15px;
+        }
+        
+        .menu-item-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin: 0;
+        }
+        
+        .menu-item-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .menu-item-description {
+            color: var(--cream);
+            margin-bottom: 15px;
+        }
+        
+        .menu-item-tags {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .menu-tag {
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            color: var(--gold-light);
+        }
+        
+        .menu-tag i {
+            margin-right: 5px;
+        }
+        
+        .signature-dishes {
+            margin-top: 50px;
+        }
+        
+        .signature-dish {
+            position: relative;
+            overflow: hidden;
+            border: 3px solid var(--gold);
+            height: 300px;
+            margin-bottom: 30px;
+        }
+        
+        .signature-dish img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .signature-dish:hover img {
+            transform: scale(1.1);
+        }
+        
+        .signature-dish-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            transition: var(--transition);
+        }
+        
+        .signature-dish:hover .signature-dish-overlay {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), transparent);
+        }
+        
+        .signature-dish-title {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .signature-dish-price {
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+        }
+        
+        /* Reservation Section */
+        .reservation-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .reservation-form {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 40px;
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .reservation-form h2 {
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-control {
+            background-color: rgba(18, 18, 18, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--cream);
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        @media (max-width: 767px) {
+            .form-control {
+                padding: 10px;
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+            
+            .form-label {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+        }
+        
+        .form-control:focus {
+            background-color: rgba(18, 18, 18, 0.9);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+        }
+        
+        .form-label {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+        
+        .reservation-info {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 40px;
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            height: 100%;
+        }
+        
+        .reservation-info h2 {
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .info-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .info-item-content h5 {
+            color: var(--gold-light);
+            margin-bottom: 5px;
+        }
+        
+        .info-item-content p {
+            color: var(--cream);
+            margin: 0;
+        }
+        
+        .map-container {
+            height: 250px;
+            margin-top: 30px;
+            border: 3px solid var(--gold);
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background-color: var(--black-light);
+        }
+        
+        .testimonial-card {
+            background-color: rgba(30, 30, 30, 0.9);
+            padding: 30px;
+            border-left: 3px solid var(--gold);
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .testimonial-card::after {
+            content: '\201D';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 5rem;
+            font-family: Georgia, serif;
+            color: rgba(212, 175, 55, 0.2);
+            line-height: 0;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-content::before {
+            content: '\201C';
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            font-size: 3rem;
+            font-family: Georgia, serif;
+            color: rgba(212, 175, 55, 0.2);
+            z-index: -1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            margin-right: 15px;
+        }
+        
+        .author-info h5 {
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--cream);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-rating {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .awards-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .award-badge {
+            display: inline-block;
+            margin: 0 15px 30px;
+            transition: var(--transition);
+        }
+        
+        .award-badge:hover {
+            transform: scale(1.1);
+        }
+        
+        .award-badge img {
+            height: 100px;
+            width: auto;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--black);
+            padding: 70px 0 0;
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--gold-dark), var(--gold), var(--gold-dark));
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            display: block;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: var(--cream);
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .footer-text {
+            color: var(--cream);
+            margin-bottom: 20px;
+        }
+        
+        .footer-social {
+            margin-bottom: 30px;
+        }
+        
+        .footer-social a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--gold);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+        
+        .footer-heading {
+            color: var(--gold);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a i {
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact-item i {
+            color: var(--gold);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-contact-text {
+            color: var(--cream);
+        }
+        
+        .footer-newsletter p {
+            color: var(--cream);
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            position: relative;
+        }
+        
+        .newsletter-input {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--cream);
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .newsletter-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            padding: 0 15px;
+            background-color: var(--gold);
+            color: var(--black);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-btn:hover {
+            background-color: var(--gold-dark);
+        }
+        
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px 0;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: var(--cream);
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        /* Page Transitions */
+        .page {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .page.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes goldGlow {
+            0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
+        }
+        
+        @keyframes smoke {
+            0% { opacity: 0; transform: translateY(0) scale(1); }
+            25% { opacity: 0.5; }
+            50% { opacity: 0.3; transform: translateY(-20px) scale(1.5); }
+            75% { opacity: 0.2; }
+            100% { opacity: 0; transform: translateY(-40px) scale(2); }
+        }
+        
+        .smoke-effect {
+            position: relative;
+        }
+        
+        .smoke-effect::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            filter: blur(8px);
+            border-radius: 50%;
+            animation: smoke 3s infinite;
+        }
+        
+        .gold-border {
+            position: relative;
+        }
+        
+        .gold-border::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border: 1px solid var(--gold);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .gold-border:hover::after {
+            opacity: 1;
+            animation: goldGlow 2s infinite;
+        }
+        
+        /* Make all images responsive by default */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Responsive table styles */
+        @media (max-width: 767px) {
+            table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+            }
+        }
+        
+        /* Responsive Grid Styles */
+        @media (max-width: 767px) {
+            .container {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            
+            .row {
+                margin-right: -10px;
+                margin-left: -10px;
+            }
+            
+            [class*='col-'] {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            .container {
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+            
+            .row {
+                margin-right: -5px;
+                margin-left: -5px;
+            }
+            
+            [class*='col-'] {
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1199px) {
+            .container {
+                max-width: 95%;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .menu-item img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        
+        @media (max-width: 991px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .navbar-collapse {
+                background-color: rgba(18, 18, 18, 0.95);
+                padding: 20px;
+                border-bottom: 3px solid var(--gold);
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            
+            .language-selector {
+                margin: 15px 0 0;
+            }
+            
+            .about-img {
+                margin-bottom: 30px;
+            }
+            
+            .reservation-info {
+                margin-top: 30px;
+            }
+            
+            .menu-item {
+                margin-bottom: 30px;
+            }
+            
+            .signature-dish {
+                margin-bottom: 30px;
+            }
+            
+            .testimonial {
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .btn-gold, .btn-outline-gold {
+                padding: 10px 20px;
+                font-size: 1rem;
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+                text-align: center;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .menu-tabs {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .menu-tab {
+                margin-bottom: 10px;
+                width: 45%;
+                text-align: center;
+            }
+            
+            .footer-widget {
+                margin-bottom: 30px;
+            }
+            
+            .about-text {
+                text-align: center;
+            }
+            
+            .about-text p {
+                text-align: left;
+            }
+            
+            .reservation-form {
+                padding: 20px;
+            }
+            
+            .menu-category {
+                padding: 30px 15px;
+            }
+        }
+        
+        /* Footer Styles */
+        .site-footer {
+            background-color: var(--black-light);
+            padding: 70px 0 0;
+            position: relative;
+            margin-top: 50px;
+            border-top: 3px solid var(--gold);
+        }
+        
+        .site-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .footer-widget {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 30px;
+        }
+        
+        .footer-widget h3 {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-widget h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .footer-widget p {
+            color: var(--cream);
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--gold);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+        
+        .contact-info, .opening-hours {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .contact-info li, .opening-hours li {
+            color: var(--cream);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info li i {
+            color: var(--gold);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        .newsletter-form {
+            position: relative;
+            margin-top: 15px;
+        }
+        
+        .newsletter-form input {
+            width: 100%;
+            padding: 12px 50px 12px 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--cream);
+            border-radius: 4px;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .newsletter-form button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: var(--gold);
+            color: var(--black);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--gold-dark);
+        }
+        
+        @media (max-width: 575px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content {
+                width: 95%;
+                padding: 20px;
+            }
+            
+            .floating-music,
+            .floating-whatsapp {
+                width: 40px;
+                height: 40px;
+                right: 15px;
+            }
+            
+            .floating-music i,
+            .floating-whatsapp i {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .menu-tab {
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .menu-item-title {
+                font-size: 1.2rem;
+            }
+            
+            .menu-item-price {
+                font-size: 1.1rem;
+            }
+            
+            .menu-item-description {
+                font-size: 0.9rem;
+            }
+            
+            .btn-gold, .btn-outline-gold {
+                width: 100%;
+            }
+            
+            .footer-widget h3 {
+                font-size: 1.3rem;
+            }
+            
+            .footer-widget p, .footer-widget ul li {
+                font-size: 0.9rem;
+            }
+            
+            .footer-bottom {
+                padding: 15px 0;
+            }
+            
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            
+            .form-group {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Reservation Page -->
+    <div id="reservation" class="page">
+        <section class="hero" style="height: 60vh;">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Reserve Your Table</h1>
+                <p>Experience the luxury of Amsterdam in Agadir</p>
+            </div>
+        </section>
+        
+        <section class="reservation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="reservation-form">
+                            <h2 class="section-title">Book Your Experience</h2>
+                            <form id="booking-form">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="date">Date</label>
+                                        <input type="date" id="date" class="form-control" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="time">Time</label>
+                                        <input type="time" id="time" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="guests">Number of Guests</label>
+                                        <select id="guests" class="form-control" required>
+                                            <option value="">Select</option>
+                                            <option value="1">1 Person</option>
+                                            <option value="2">2 People</option>
+                                            <option value="3">3 People</option>
+                                            <option value="4">4 People</option>
+                                            <option value="5">5 People</option>
+                                            <option value="6">6 People</option>
+                                            <option value="7+">7+ People</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="occasion">Occasion (Optional)</label>
+                                        <select id="occasion" class="form-control">
+                                            <option value="">Select</option>
+                                            <option value="birthday">Birthday</option>
+                                            <option value="anniversary">Anniversary</option>
+                                            <option value="business">Business Dinner</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="special-requests">Special Requests (Optional)</label>
+                                    <textarea id="special-requests" class="form-control" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-gold btn-block">Reserve Now</button>
+                            </form>
+                            <div class="whatsapp-booking">
+                                <p>For immediate assistance:</p>
+                                <a href="https://wa.me/+212767234630" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="location-info">
+                            <h2 class="section-title">Find Us</h2>
+                            <div class="location-details">
+                                <div class="address">
+                                    <h3><i class="fas fa-map-marker-alt"></i> Our Address</h3>
+                                    <p>Résidence Islane GH14 N°6, Avenue Larache<br>Agadir, Morocco</p>
+                                </div>
+                                <div class="hours">
+                                    <h3><i class="far fa-clock"></i> Opening Hours</h3>
+                                    <p>Open Daily<br>07:00 – 01:00</p>
+                                </div>
+                                <div class="contact">
+                                    <h3><i class="fas fa-phone-alt"></i> Contact</h3>
+                                    <p>Phone: +212 XXXXXXXXX<br>Email: info@amsterdamluxury.com</p>
+                                </div>
+                            </div>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.9253555660873!2d-9.602014684886305!3d30.414246981748198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b6e9daad02d7%3A0x76d31e5ecf94aee4!2sAv.%20Larache%2C%20Agadir%2080000%2C%20Morocco!5e0!3m2!1sen!2sus!4v1625145283408!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        // Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Page Navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Show home page by default
+            showPage('home');
+            
+            // Add active class to home link
+            navLinks.forEach(link => {
+                if (link.getAttribute('onclick') && link.getAttribute('onclick').includes('home')) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Menu Tabs
+            const menuTabs = document.querySelectorAll('.menu-tab');
+            const menuCategories = document.querySelectorAll('.menu-category');
+            
+            menuTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    
+                    // Update active tab
+                    menuTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show target category
+                    menuCategories.forEach(category => {
+                        category.classList.remove('active');
+                    });
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+            
+            // Music Toggle
+            const musicToggle = document.getElementById('music-toggle');
+            const backgroundMusic = document.getElementById('background-music');
+            
+            musicToggle.addEventListener('click', function() {
+                if (backgroundMusic.paused) {
+                    backgroundMusic.play();
+                    this.classList.add('playing');
+                } else {
+                    backgroundMusic.pause();
+                    this.classList.remove('playing');
+                }
+            });
+            
+            // Language Selector
+            const langButtons = document.querySelectorAll('.language-btn');
+            
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    langButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    // Here you would implement actual language switching
+                    // For demo purposes, we're just updating the active button
+                });
+            });
+            
+            // Reviews Toggle
+            const reviewsToggle = document.querySelector('.reviews-toggle');
+            const reviewsContainer = document.querySelector('.reviews-container');
+            
+            reviewsToggle.addEventListener('click', function() {
+                reviewsContainer.classList.toggle('active');
+            });
+            
+            // Initialize Signature Dishes Carousel
+            // This would typically use a library like Slick or Swiper
+            // For demo purposes, we're just adding a simple hover effect
+            const signatureDishes = document.querySelectorAll('.signature-dish');
+            
+            signatureDishes.forEach(dish => {
+                dish.addEventListener('mouseenter', function() {
+                    this.classList.add('active');
+                });
+                dish.addEventListener('mouseleave', function() {
+                    this.classList.remove('active');
+                });
+            });
+            
+            // Reservation Form Submission
+            const bookingForm = document.getElementById('booking-form');
+            
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your reservation! We will confirm your booking shortly.');
+                    this.reset();
+                });
+            }
+            
+            // Newsletter Form Submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for subscribing to our newsletter!');
+                    this.reset();
+                });
+            }
+            
+            // Add parallax effect to hero sections
+            window.addEventListener('scroll', function() {
+                const heroSections = document.querySelectorAll('.hero');
+                const scrollPosition = window.pageYOffset;
+                
+                heroSections.forEach(section => {
+                    const offset = section.offsetTop;
+                    const height = section.offsetHeight;
+                    
+                    if (scrollPosition >= offset && scrollPosition <= offset + height) {
+                        const speed = 0.5;
+                        const yPos = (scrollPosition - offset) * speed;
+                        section.style.backgroundPositionY = `${yPos}px`;
+                    }
+                });
+            });
+            
+            // Add smoke effect animation
+            function createSmokeEffect() {
+                const smokeElements = document.querySelectorAll('.menu-tag .fa-fire');
+                
+                smokeElements.forEach(element => {
+                    const smokeParticle = document.createElement('span');
+                    smokeParticle.classList.add('smoke-particle');
+                    element.appendChild(smokeParticle);
+                    
+                    setTimeout(() => {
+                        smokeParticle.remove();
+                    }, 3000);
+                });
+            }
+            
+            // Run smoke effect every few seconds
+            setInterval(createSmokeEffect, 5000);
+            
+            // Add gold sparkle effect to mocktails
+            function createSparkleEffect() {
+                const drinkItems = document.querySelectorAll('#drinks .menu-item');
+                
+                drinkItems.forEach(item => {
+                    const sparkle = document.createElement('span');
+                    sparkle.classList.add('gold-sparkle');
+                    sparkle.style.left = `${Math.random() * 100}%`;
+                    sparkle.style.top = `${Math.random() * 100}%`;
+                    item.appendChild(sparkle);
+                    
+                    setTimeout(() => {
+                        sparkle.remove();
+                    }, 1500);
+                });
+            }
+            
+            // Run sparkle effect every few seconds
+            setInterval(createSparkleEffect, 3000);
+        });
+    </script>
+    
+   
+    
+  
+     
+   
+     
+     <!-- Floating WhatsApp -->
+     <a href="https://wa.me/+212767234630" class="floating-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                AMSTERDAM
+                <span>LUXURY RESTAURANT</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('about')">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('menu')">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('reservation')">Reservation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1>A Symphony of Luxury & Flavor <span>in the Heart of Agadir</span></h1>
+                <p>Experience the finest Dutch-inspired international cuisine with Moroccan hospitality</p>
+                <div>
+                    <button class="btn btn-gold" onclick="showPage('reservation')">Reserve Your Table</button>
+                    <button class="btn btn-outline-gold" onclick="showPage('menu')">Explore Menu</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section Preview -->
+        <section class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="about-img">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/f5/46/c9/amsterdam-restaurant.jpg?w=1100&h=1100&s=1" alt="Restaurant Interior">
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="about-text about-content">
+                            <h2>Welcome to Amsterdam Luxury</h2>
+                            <p>Nestled in the heart of Agadir, Amsterdam Luxury Restaurant brings the refined elegance of Dutch culinary tradition to Morocco's vibrant coastal city. Our restaurant is more than a dining venue—it's a sensory journey where exceptional flavors meet theatrical presentation.</p>
+                            <p>Every dish tells a story of cultural fusion, where Dutch precision meets Moroccan passion, creating an unforgettable gastronomic experience.</p>
+                            <button class="btn btn-outline-gold" onclick="showPage('about')">Discover Our Story</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Preview -->
+        <section class="menu-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Signature Creations</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="signature-dish gold-border">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80" alt="Golden Burger">
+                            <div class="signature-dish-overlay">
+                                <h4 class="signature-dish-title smoke-effect">Golden Burger</h4>
+                                <p class="signature-dish-price">350 MAD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="signature-dish gold-border">
+                            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Entrecôte Kobe">
+                            <div class="signature-dish-overlay">
+                                <h4 class="signature-dish-title smoke-effect">Entrecôte Kobe</h4>
+                                <p class="signature-dish-price">450 MAD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="signature-dish gold-border">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1071&q=80" alt="Shrimp Garlic">
+                            <div class="signature-dish-overlay">
+                                <h4 class="signature-dish-title smoke-effect">Shrimp Garlic</h4>
+                                <p class="signature-dish-price">280 MAD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="signature-dish gold-border">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=327&q=80" alt="Poffertjes">
+                            <div class="signature-dish-overlay">
+                                <h4 class="signature-dish-title smoke-effect">Poffertjes</h4>
+                                <p class="signature-dish-price">150 MAD</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <button class="btn btn-gold" onclick="showPage('menu')">View Full Menu</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">What Our Guests Say</h2>
+                <div class="row">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"An extraordinary dining experience! The Golden Burger was presented with a theatrical smoke effect that was as impressive as the taste. The live violin music created the perfect ambiance."</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+                                <div class="author-info">
+                                    <h5>James Wilson</h5>
+                                    <p>London, UK</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"The fusion of Dutch and Moroccan flavors is simply magical. Every detail from the velvet chairs to the gold-rimmed plates speaks of luxury. A must-visit when in Agadir!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+                                <div class="author-info">
+                                    <h5>Sophie Laurent</h5>
+                                    <p>Paris, France</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-card">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="testimonial-content">"The service is impeccable and the atmosphere is enchanting. I celebrated my anniversary here and they made it truly special with personalized attention and complimentary champagne."</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Customer">
+                                <div class="author-info">
+                                    <h5>Ahmed Khalil</h5>
+                                    <p>Casablanca, Morocco</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Awards Section -->
+                <div class="awards-section" data-aos="fade-up">
+                    <h3 class="gold-text mb-4">Our Recognitions</h3>
+                    <div class="award-badge">
+                        <img src="https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2023_LL.png" alt="TripAdvisor Travellers' Choice">
+                    </div>
+                    <div class="award-badge">
+                        <img src="https://www.theworlds50best.com/filestore/png/50best-logo.png" alt="World's 50 Best Restaurants">
+                    </div>
+                    <div class="award-badge">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Michelin_Guide.svg/1200px-Michelin_Guide.svg.png" alt="Michelin Guide">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation CTA -->
+        <section class="reservation-section">
+            <div class="container text-center" data-aos="fade-up">
+                <h2 class="gold-text mb-4">Reserve Your Experience</h2>
+                <p class="text-white mb-4">Indulge in an unforgettable dining journey at Amsterdam Luxury Restaurant</p>
+                <button class="btn btn-gold" onclick="showPage('reservation')">Book Your Table Now</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="hero" style="height: 60vh;">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Our Story</h1>
+                <p>The journey of Amsterdam Luxury Restaurant</p>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="about-content">
+                            <h2 class="gold-text mb-4">A Dutch Culinary Haven in Morocco</h2>
+                            <p>Amsterdam Luxury Restaurant was born from a vision to bring the sophisticated culinary traditions of the Netherlands to the vibrant coastal city of Agadir. Founded in 2018 by Dutch restaurateur Jan van der Meer and Moroccan chef Yasmine Benali, our establishment represents the perfect marriage of European elegance and North African hospitality.</p>
+                            <p>What began as a bold experiment has blossomed into one of Agadir's most prestigious dining destinations, where guests can experience the meticulous attention to detail that defines Dutch cuisine, infused with the rich flavors and warm hospitality of Morocco.</p>
+                            <p>Our restaurant's design draws inspiration from Amsterdam's luxury canal houses, featuring rich dark wood, plush velvet seating, and gold accents that create an atmosphere of refined opulence.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="about-img mb-4">
+                            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Restaurant Interior">
+                        </div>
+                        <div class="chef-signature text-end">Jan & Yasmine</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" style="background-color: var(--black);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Philosophy</h2>
+                <div class="row">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-item text-center">
+                            <i class="fas fa-utensils gold-text" style="font-size: 2.5rem; margin-bottom: 20px;"></i>
+                            <h3>Culinary Excellence</h3>
+                            <p class="menu-item-description">We believe in creating dishes that not only satisfy the palate but also engage all the senses. Our chefs combine traditional Dutch techniques with Moroccan flavors to create unique culinary masterpieces.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu-item text-center">
+                            <i class="fas fa-theater-masks gold-text" style="font-size: 2.5rem; margin-bottom: 20px;"></i>
+                            <h3>Theatrical Presentation</h3>
+                            <p class="menu-item-description">Dining is a performance at Amsterdam Luxury. From smoking plates to tableside preparations, we create memorable moments that elevate the dining experience beyond mere consumption.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="menu-item text-center">
+                            <i class="fas fa-hands-helping gold-text" style="font-size: 2.5rem; margin-bottom: 20px;"></i>
+                            <h3>Impeccable Service</h3>
+                            <p class="menu-item-description">Our staff is trained in the fine art of hospitality, combining Dutch efficiency with Moroccan warmth to ensure that every guest feels valued and attended to throughout their visit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" style="background-color: var(--black-light);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Meet Our Team</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu-item text-center">
+                            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=768&q=80" alt="Chef" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid var(--gold);">
+                            <h3>Jan van der Meer</h3>
+                            <p class="gold-text">Founder & Executive Chef</p>
+                            <p class="menu-item-description">With over 20 years of experience in Michelin-starred restaurants across Europe, Jan brings his passion for Dutch cuisine and innovative techniques to every dish.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu-item text-center">
+                            <img src="https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Chef" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid var(--gold);">
+                            <h3>Yasmine Benali</h3>
+                            <p class="gold-text">Co-Founder & Head Chef</p>
+                            <p class="menu-item-description">Born and raised in Morocco, Yasmine's deep understanding of local ingredients and traditional cooking methods adds authentic Moroccan flair to our menu.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="menu-item text-center">
+                            <img src="https://images.unsplash.com/photo-1571805529673-0f56b922b359?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Sommelier" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid var(--gold);">
+                            <h3>Pierre Dubois</h3>
+                            <p class="gold-text">Head Sommelier</p>
+                            <p class="menu-item-description">Pierre's expertise in wine pairing elevates our dining experience, with a special focus on Dutch and European wines that complement our unique menu.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="menu-item text-center">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Manager" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid var(--gold);">
+                            <h3>Amina El Fassi</h3>
+                            <p class="gold-text">Restaurant Manager</p>
+                            <p class="menu-item-description">With her warm personality and attention to detail, Amina ensures that every guest receives personalized service and leaves with unforgettable memories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" style="background-color: var(--black);">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">The Amsterdam Experience</h2>
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="about-img mb-4">
+                            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Live Music">
+                        </div>
+                        <h3 class="gold-text mb-3">Live Violin Performances</h3>
+                        <p>Every evening, our resident violinists create a magical atmosphere with classical and contemporary melodies that enhance your dining experience. The soft, elegant music complements the theatrical presentation of our dishes.</p>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <div class="about-img mb-4">
+                            <img src="https://images.unsplash.com/photo-1560624052-3759a0e5a0d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Elegant Interior">
+                        </div>
+                        <h3 class="gold-text mb-3">Luxurious Ambiance</h3>
+                        <p>Our interior design draws inspiration from Amsterdam's canal houses, featuring rich dark wood, velvet seating, and gold accents. Every detail, from the custom lighting to the hand-selected tableware, has been chosen to create an atmosphere of refined elegance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Menu Page -->
+    <div id="menu" class="page">
+        <section class="hero" style="height: 60vh;">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Our Menu</h1>
+                <p>A culinary journey through Dutch and international cuisine</p>
+            </div>
+        </section>
+        
+        <section class="menu-section">
+            <div class="container">
+                <div class="menu-tabs" data-aos="fade-up">
+                    <button class="menu-tab active" data-target="starters">Starters</button>
+                    <button class="menu-tab" data-target="mains">Main Courses</button>
+                    <button class="menu-tab" data-target="desserts">Desserts</button>
+                    <button class="menu-tab" data-target="drinks">Mocktails</button>
+                </div>
+                
+                <div class="menu-content">
+                    <!-- Starters -->
+                    <div class="menu-category active" id="starters">
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-up">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Dutch Herring</h3>
+                                        <span class="menu-item-price">180 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Traditional Dutch herring served with pickled cucumber, diced onions, and a special Amsterdam sauce</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-fire"></i> Smoked Presentation</span>
+                                        <span class="menu-tag"><i class="fas fa-leaf"></i> Fresh Ingredients</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Goat Cheese Croquettes</h3>
+                                        <span class="menu-item-price">160 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Crispy croquettes filled with creamy Dutch goat cheese, served with honey-thyme drizzle and micro greens</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-user-chef"></i> Chef's Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Moroccan Seafood Pastilla</h3>
+                                        <span class="menu-item-price">190 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Delicate pastry filled with seafood, aromatic herbs, and Moroccan spices, dusted with powdered sugar and cinnamon</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-fire"></i> Smoked Presentation</span>
+                                        <span class="menu-tag"><i class="fas fa-user-chef"></i> Chef's Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Truffle Bitterballen</h3>
+                                        <span class="menu-item-price">170 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Traditional Dutch meat croquettes infused with black truffle, served with mustard aioli</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-leaf"></i> Fresh Ingredients</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Courses -->
+                    <div class="menu-category" id="mains">
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-up">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Golden Burger</h3>
+                                        <span class="menu-item-price">350 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Wagyu beef patty topped with 24-karat gold leaf, truffle aioli, caramelized onions, and aged Gouda cheese on a brioche bun</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-fire"></i> Smoked Presentation</span>
+                                        <span class="menu-tag"><i class="fas fa-user-chef"></i> Chef's Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Entrecôte Kobe</h3>
+                                        <span class="menu-item-price">450 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Japanese Kobe beef entrecôte grilled to perfection, served with Dutch-style potato gratin and seasonal vegetables</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-fire"></i> Smoked Presentation</span>
+                                        <span class="menu-tag"><i class="fas fa-leaf"></i> Fresh Ingredients</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Shrimp Garlic</h3>
+                                        <span class="menu-item-price">280 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Jumbo shrimp sautéed in Dutch butter with garlic, white wine, and herbs, served with saffron rice</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-leaf"></i> Fresh Ingredients</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Stamppot Royale</h3>
+                                        <span class="menu-item-price">260 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Elevated version of the Dutch classic: mashed potatoes with kale, topped with slow-cooked beef short rib and crispy shallots</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-user-chef"></i> Chef's Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Desserts -->
+                    <div class="menu-category" id="desserts">
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-up">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Poffertjes Deluxe</h3>
+                                        <span class="menu-item-price">140 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Traditional Dutch mini pancakes served with gold-dusted butter, maple syrup, and fresh berries</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-user-chef"></i> Chef's Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Chocolate Stroopwafel Cake</h3>
+                                        <span class="menu-item-price">160 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Layers of Dutch stroopwafel cookies and rich chocolate mousse, topped with caramel sauce and gold flakes</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-fire"></i> Smoked Presentation</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Moroccan Orange Blossom Crème Brûlée</h3>
+                                        <span class="menu-item-price">150 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Classic crème brûlée infused with orange blossom water, topped with caramelized sugar and candied orange peel</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-leaf"></i> Fresh Ingredients</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Speculaas Tiramisu</h3>
+                                        <span class="menu-item-price">145 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Dutch-inspired tiramisu made with speculaas cookies, coffee, mascarpone cream, and dusted with cinnamon</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-user-chef"></i> Chef's Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mocktails -->
+                    <div class="menu-category" id="drinks">
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-up">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Golden Tulip</h3>
+                                        <span class="menu-item-price">120 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Passion fruit, mango, and orange juice blend with edible gold flakes and a tulip-shaped garnish</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-fire"></i> Smoked Presentation</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Moroccan Mint Cloud</h3>
+                                        <span class="menu-item-price">110 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Fresh mint, lime, cucumber, and sparkling water topped with a cloud of mint-infused cotton candy</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-leaf"></i> Fresh Ingredients</span>
+                                        <span class="menu-tag"><i class="fas fa-user-chef"></i> Chef's Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Amsterdam Sunset</h3>
+                                        <span class="menu-item-price">130 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Layered mocktail with pomegranate, orange, and grapefruit juices, topped with rose water foam and edible flowers</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-fire"></i> Smoked Presentation</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="menu-item">
+                                    <div class="menu-item-header">
+                                        <h3 class="menu-item-title">Royal Saffron Elixir</h3>
+                                        <span class="menu-item-price">140 MAD</span>
+                                    </div>
+                                    <p class="menu-item-description">Saffron-infused pineapple juice with coconut cream, cardamom, and a touch of vanilla, served in a gold-rimmed glass</p>
+                                    <div class="menu-item-tags">
+                                        <span class="menu-tag"><i class="fas fa-user-chef"></i> Chef's Special</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Signature Dishes Carousel -->
+                <div class="signature-dishes" data-aos="fade-up">
+                    <h2 class="section-title">Signature Dishes</h2>
+                    <div class="signature-carousel">
+                        <div class="signature-dish">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947" alt="Golden Burger" class="signature-img">
+                            <div class="signature-overlay">
+                                <h3>Golden Burger</h3>
+                                <p>Our most luxurious creation</p>
+                            </div>
+                        </div>
+                        <div class="signature-dish">
+                            <img src="https://images.unsplash.com/photo-1546833998-877b37c2e5c4" alt="Entrecôte Kobe" class="signature-img">
+                            <div class="signature-overlay">
+                                <h3>Entrecôte Kobe</h3>
+                                <p>The finest Japanese beef</p>
+                            </div>
+                        </div>
+                        <div class="signature-dish">
+                            <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8" alt="Poffertjes Deluxe" class="signature-img">
+                            <div class="signature-overlay">
+                                <h3>Poffertjes Deluxe</h3>
+                                <p>A Dutch classic reimagined</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+    </div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+        
+        // Add showPage function for navigation
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+                page.style.display = 'none';
+            });
+            
+            // Show target page
+            const targetPage = document.getElementById(pageId);
+            targetPage.classList.add('active');
+            targetPage.style.display = 'block';
+            
+            // Update active nav link
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(pageId)) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Close mobile menu if open
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse) {
+                navbarCollapse.classList.remove('show');
+            }
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+      <section>
+         <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>Amsterdam Luxury</h3>
+                        <p>A Symphony of Luxury & Flavor in the Heart of Agadir</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>Contact Info</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> Résidence Islane GH14 N°6, Avenue Larache, Agadir</li>
+                            <li><i class="fas fa-phone-alt"></i> +212 XXXXXXXXX</li>
+                            <li><i class="fas fa-envelope"></i> info@amsterdamluxury.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>Opening Hours</h3>
+                        <ul class="opening-hours">
+                            <li>Monday - Sunday</li>
+                            <li>07:00 AM - 01:00 AM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h3>Newsletter</h3>
+                        <p>Get a taste of Amsterdam in Agadir</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2024 Amsterdam Luxury Restaurant. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+     </section>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+    </body>
+</html>
