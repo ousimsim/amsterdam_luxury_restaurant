@@ -250,7 +250,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/fd/1c/1c/caption.jpg?w=1100&h=1100&s=1');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -1661,6 +1661,19 @@
     <script>
         // Navigation
         document.addEventListener('DOMContentLoaded', function() {
+            // Fix navbar toggler not closing on mobile
+            const mobileNavLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            
+            // Close navbar when a nav link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarToggler.click();
+                    }
+                });
+            });
             // Page Navigation
             const navLinks = document.querySelectorAll('.nav-link');
             
